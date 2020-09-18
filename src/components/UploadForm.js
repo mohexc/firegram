@@ -23,7 +23,7 @@ const UploadForm = () => {
                 {/*  eslint-disable-next-line */}
                 {error && <div className="error">{error} 💥💥💥💥</div>}
                 {/*  eslint-disable-next-line */}
-                {file && <div>{file.name}</div> 🚀🚀🚀🚀🚀🚀}
+                {file && <div>{file.name} 🚀🚀🚀🚀🚀🚀</div>}
             </div>
         </form>
     )
