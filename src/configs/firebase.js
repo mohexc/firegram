@@ -1,6 +1,7 @@
 import * as firebase from "firebase/app"
-import './firebase/storage'
-import './firebase/firestore'
+import 'firebase/storage'
+import 'firebase/firestore'
+
 
 const firebaseApp = firebase.initializeApp({
   apiKey: process.env.REACT_APP_APIKEY,
