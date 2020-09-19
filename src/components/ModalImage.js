@@ -1,10 +1,26 @@
 import React from 'react'
+import { motion } from "framer-motion"
 
-const ModalImage = ({ selectedImg }) => {
+const ModalImage = ({ selectedImg, setSelectedImg }) => {
+    const handleClick = (e) => {
+        if (e.target.classList.contains('backdrop')) {
+            setSelectedImg(null)
+        }
+    }
     return (
-        <div className="backdrop">
-            <img src={selectedImg} alt="enlarged pic" />
-        </div>
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="backdrop"
+            onClick={handleClick}
+        >
+            <motion.img
+                initial={{ y: '-100vh' }}
+                animate={{ y: 0 }}
+                src={selectedImg}
+                alt="enlarged pic"
+            />
+        </motion.div>
     )
 }
 
