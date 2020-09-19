@@ -7,7 +7,7 @@ const useFirestore = (collection) => {
     useEffect(() => {
         const unsub = db
             .collection(collection)
-            .onSnapshot("createdAt")
+            .orderBy('createdAt', 'desc')
             .onSnapshot((snap) => {
                 let documents = []
                 snap.forEach(doc => {
